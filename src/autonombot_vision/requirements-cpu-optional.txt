@@ -1,0 +1,10 @@
+# Optional CPU Ultralytics YOLO path (NOT installed by default).
+# Installing these accepts Ultralytics AGPL-3.0 terms:
+#   https://docs.ultralytics.com/models/yolov8/
+#
+#   pip3 install --user -r requirements-cpu-optional.txt
+#
+# Prefer the board NPU path (cix_ros_noe_yolo) for the supported default.
+ultralytics>=8.0.0
+torch>=1.9.0
+torchvision>=0.10.0

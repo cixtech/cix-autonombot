@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AutonomBot RViz
+Name[en]=AutonomBot RViz
+Comment=重启 RViz（taskset CPU 9，环境与仿真对齐）
+Comment[en]=Restart RViz on CPU 9 with sim-aligned ROS/DDS env
+Exec=bash -lc '~/cix-autonombot/scripts/run_rviz.sh'
+Terminal=true
+Categories=Development;Simulation;
+StartupNotify=true
+Icon=utilities-terminal

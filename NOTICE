@@ -1,0 +1,50 @@
+cix-autonombot (AutonomBot)
+===========================
+
+This repository is a fork of houimliraed/autonomous_ai_rbt
+(https://github.com/houimliraed/autonomous_ai_rbt, Apache License 2.0), an
+autonomous navigation robot stack built with ROS 2. All files are licensed
+under the Apache License 2.0 (see LICENSE).
+
+Upstream base: commit a73d1a1 (2025-08-15, "navigation fixes"), the tip of the
+upstream repository at the time of the fork.
+
+CIX Technology Group modifications (Copyright 2026 Cix Technology Group Co.,
+Ltd) include:
+
+- CIX P1 (CD8180, aarch64) board adaptation and board bring-up scripts
+  (`scripts/run_sim.sh`, `scripts/env.sh`, `scripts/setup_ubuntu.sh`,
+  desktop launchers).
+- NPU vision integration: YOLO inference on the CIX NPU via the
+  `cix_ros_noe_yolo` package from the CIX Robotics SDK (not vendored here),
+  handing detections to `advanced_vision_navigator`; optional NPU hand-pose
+  teleop via the SDK package `cix_ros_noe_handpose`.
+- Localhost-only DDS network isolation for simulation
+  (`setup_network_isolation()`), CPU-affinity tuning, and RViz/Gazebo
+  performance guidance.
+- Adaptation and startup documentation (`docs/`).
+
+The upstream README, media, and simulation assets are inherited from upstream.
+
+Third-party assets
+------------------
+
+- The simulation worlds `small_house.world` and `small_warehouse.world`, and
+  the models under `src/autonombot_description/models/`
+  (`aws_robomaker_residential_*`, `aws_robomaker_warehouse_*`), are derived
+  from the AWS RoboMaker simulation worlds
+  (https://github.com/aws-robotics/aws-robomaker-small-house-world and
+  https://github.com/aws-robotics/aws-robomaker-small-warehouse-world),
+  Apache License 2.0, Copyright Amazon.com, Inc. or its affiliates.
+
+- The YOLOv8 weights file `yolov8n.pt` is NOT distributed with this
+  repository. Ultralytics YOLOv8 weights are licensed under AGPL-3.0
+  (https://docs.ultralytics.com/models/yolov8/); users download them
+  separately (see README).
+
+- Optional CPU Ultralytics YOLO (`ultralytics` / `torch` / `torchvision`) is
+  not a default dependency of this repository. Those packages are listed only
+  in `src/autonombot_vision/requirements-cpu-optional.txt`. Users who need
+  the CPU path must `pip install` them themselves and accept Ultralytics'
+  AGPL-3.0 terms. The supported default remains NPU inference via
+  `cix_ros_noe_yolo`.

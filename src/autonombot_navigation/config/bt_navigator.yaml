@@ -1,0 +1,14 @@
+bt_navigator:
+  ros__parameters:
+    use_sim_time: true
+    global_frame: map
+    robot_base_frame: base_link
+    odom_topic: /autonombot_drivers/odom
+    transform_tolerance: 0.3
+    default_server_timeout: 1000
+    bt_loop_duration: 10
+    wait_for_service_timeout: 1000
+    # Behavior tree paths are set in autonombot_navigation/launch/navigation.launch.py
+    # (install/share path) so clones work on any machine. Placeholders below are overridden.
+    default_nav_to_pose_bt_xml: ""
+    default_nav_through_poses_bt_xml: ""

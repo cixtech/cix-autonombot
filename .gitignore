@@ -1,0 +1,111 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+compile_commands.json
+.clangd/
+
+# ROS
+log/
+install/
+build/
+devel/
+.ros_test/
+.ros_test2/
+
+# IDEs / editors
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# YOLO model files (these are large and should be downloaded)
+*.pt
+
+# Screen recordings (keep demo assets under media/)
+*.webm
+!media/*.webm
+
+# Maps and data files
+*.bag
+*.mcap
+maps/*.pgm
+maps/*.yaml
+!maps/example/
+
+# Documentation build
+docs/_build/
+docs/doxygen/
+
+# Logs and performance data
+*.log
+system_performance_report_*.json
+
+# Hardware-specific files
+.rviz_*
+
+# Local legacy NPU YOLO package path (replaced by src/cix_ros_noe_yolo)
+src/cix_noe_yolo/
+
+# Claude Code local state
+.claude/

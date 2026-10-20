@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AutonomBot 仿真
+Name[en]=AutonomBot Simulation
+Comment=清理残留进程并启动仿真
+Comment[en]=Clean stale processes and launch the simulation
+Exec=bash -lc '~/cix-autonombot/scripts/desktop/run_sim_desktop.sh'
+Terminal=true
+Categories=Development;Simulation;
+StartupNotify=true
+Icon=utilities-terminal

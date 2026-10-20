@@ -1,0 +1,4 @@
+# Default vision helpers (NPU path does not need Ultralytics / PyTorch).
+# Optional CPU YOLO (AGPL): see requirements-cpu-optional.txt
+opencv-python>=4.5.0
+numpy>=1.19.0

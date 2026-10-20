@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AutonomBot 看图
+Name[en]=AutonomBot Image View
+Comment=打开 rqt_image_view（请先启动仿真）
+Comment[en]=Open rqt_image_view (start simulation first)
+Exec=bash -lc '~/cix-autonombot/scripts/view_yolo_debug.sh'
+Terminal=true
+Categories=Development;Viewer;
+StartupNotify=true
+Icon=utilities-terminal
